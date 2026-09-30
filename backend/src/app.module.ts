@@ -4,6 +4,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 
+import { UsersModule } from './modules/users/users.module.js';
+import { AuthModule } from './modules/auth/auth.module.js';
+
 @Module({
   imports: [
     // ─── Global Config (reads from .env) ───────────────────────────────────────
@@ -26,8 +29,9 @@ import { AppService } from './app.service.js';
     }),
 
     // ─── Feature Modules (added progressively in each Lab) ─────────────────────
-    // Lab 2: AuthModule
-    // Lab 3: UsersModule, CategoriesModule, ProductsModule, CartModule
+    UsersModule,
+    AuthModule,
+    // Lab 3: CategoriesModule, ProductsModule, CartModule
     // Lab 4: OrdersModule
   ],
   controllers: [AppController],

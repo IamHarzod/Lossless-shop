@@ -19,6 +19,7 @@
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "seed": "npx tsx src/database/seed.ts",
+    "test:auth": "npx tsx test/test-auth.ts",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
     "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
   },

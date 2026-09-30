@@ -34,10 +34,10 @@ export class User {
     },
   })
   address?: {
-    street: string;
-    city: string;
-    district: string;
-    ward: string;
+    street?: string;
+    city?: string;
+    district?: string;
+    ward?: string;
   };
 
   @Prop({ type: Boolean, default: true })
