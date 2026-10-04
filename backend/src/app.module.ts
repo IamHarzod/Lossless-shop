@@ -6,6 +6,9 @@ import { AppService } from './app.service.js';
 
 import { UsersModule } from './modules/users/users.module.js';
 import { AuthModule } from './modules/auth/auth.module.js';
+import { CategoriesModule } from './modules/categories/categories.module.js';
+import { ProductsModule } from './modules/products/products.module.js';
+import { UploadModule } from './modules/upload/upload.module.js';
 
 @Module({
   imports: [
@@ -31,8 +34,10 @@ import { AuthModule } from './modules/auth/auth.module.js';
     // ─── Feature Modules (added progressively in each Lab) ─────────────────────
     UsersModule,
     AuthModule,
-    // Lab 3: CategoriesModule, ProductsModule, CartModule
-    // Lab 4: OrdersModule
+    CategoriesModule,
+    ProductsModule,
+    UploadModule,
+    // Lab 4: OrdersModule, CartModule
   ],
   controllers: [AppController],
   providers: [AppService],

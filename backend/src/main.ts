@@ -27,6 +27,12 @@ async function bootstrap() {
   // ─── Global API Prefix ──────────────────────────────────────────────────────
   app.setGlobalPrefix('api/v1');
 
+  // ─── Serve Static Uploads ───────────────────────────────────────────────────
+  // Allows direct browser access to uploaded product images via http://localhost:3000/uploads/...
+  const express = (await import('express')).default;
+  const path = await import('path');
+  app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
+
   const port = process.env.PORT || 3000;
   await app.listen(port);
   console.log(`🎵 Lossless-shop API is running on: http://localhost:${port}/api/v1`);
