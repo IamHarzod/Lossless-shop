@@ -9,6 +9,8 @@ import { AuthModule } from './modules/auth/auth.module.js';
 import { CategoriesModule } from './modules/categories/categories.module.js';
 import { ProductsModule } from './modules/products/products.module.js';
 import { UploadModule } from './modules/upload/upload.module.js';
+import { CartModule } from './modules/cart/cart.module.js';
+import { OrdersModule } from './modules/orders/orders.module.js';
 
 @Module({
   imports: [
@@ -37,7 +39,9 @@ import { UploadModule } from './modules/upload/upload.module.js';
     CategoriesModule,
     ProductsModule,
     UploadModule,
-    // Lab 4: OrdersModule, CartModule
+    CartModule,
+    OrdersModule,
+    // Lab 5: Reviews, Wishlist
   ],
   controllers: [AppController],
   providers: [AppService],
